@@ -8,13 +8,10 @@
 import UIKit
 
 class IssueTabViewController: UIViewController {
-    
+    let collectionView = IssueCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    @IBOutlet var backPlane: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let view = Bundle.main.loadNibNamed("IssueTabView", owner: self, options: nil)?.first as? UIView {
-//            self.view = view
-//        }
-        
-        
+        backPlane.addSubview(collectionView)
     }
 }
