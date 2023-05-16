@@ -22,6 +22,7 @@ class IssueCollectionViewCell: UICollectionViewCell {
         setTitle()
         setStackView()
         setBadge()
+        setSubIconView()
     }
     private func setTitle() {
         title.text = "iOS 이슈트래커 개발"
@@ -38,5 +39,11 @@ class IssueCollectionViewCell: UICollectionViewCell {
             labelsStackView.addArrangedSubview(BadgeLabel(name: item))
         }
         labelsStackView.addArrangedSubview(UIView(frame: CGRect()))
+    }
+    
+    private func setSubIconView() {
+        let subIconView = SubIconView(image: UIImage(systemName: "chevron.right"))
+        
+        self.addSubview(subIconView)
     }
 }
