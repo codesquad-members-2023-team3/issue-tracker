@@ -13,6 +13,7 @@
 		8FBE800B2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE80092A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift */; };
 		8FBE800C2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE800A2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib */; };
 		E4802D9D2A11FD470077B0F4 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4802D9C2A11FD470077B0F4 /* BadgeLabel.swift */; };
+		E4802D9F2A131A8D0077B0F4 /* SubIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4802D9E2A131A8D0077B0F4 /* SubIconView.swift */; };
 		E48278632A09DAC800E91FA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278622A09DAC800E91FA3 /* AppDelegate.swift */; };
 		E48278652A09DAC800E91FA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278642A09DAC800E91FA3 /* SceneDelegate.swift */; };
 		E48278672A09DAC800E91FA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48278662A09DAC800E91FA3 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		8FBE800A2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueFilterTableViewCell.xib; sourceTree = "<group>"; };
 		C4A228AF8694FA3F29925403 /* Pods_issue_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_issue_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4802D9C2A11FD470077B0F4 /* BadgeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
+		E4802D9E2A131A8D0077B0F4 /* SubIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubIconView.swift; sourceTree = "<group>"; };
 		E482785F2A09DAC800E91FA3 /* issue-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "issue-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48278622A09DAC800E91FA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48278642A09DAC800E91FA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				8FBE80092A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift */,
 				8FBE800A2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib */,
 				E4802D9C2A11FD470077B0F4 /* BadgeLabel.swift */,
+				E4802D9E2A131A8D0077B0F4 /* SubIconView.swift */,
 			);
 			path = Issue;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				E482789C2A0BAC7700E91FA3 /* IssueCollectionViewCell.swift in Sources */,
 				E48278812A09ED1E00E91FA3 /* IssueTabViewController.swift in Sources */,
 				E48278632A09DAC800E91FA3 /* AppDelegate.swift in Sources */,
+				E4802D9F2A131A8D0077B0F4 /* SubIconView.swift in Sources */,
 				8F334AAB2A0B7E7C0070DDEA /* IssueFilterTableViewController.swift in Sources */,
 				8FBE800B2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift in Sources */,
 				E48278652A09DAC800E91FA3 /* SceneDelegate.swift in Sources */,

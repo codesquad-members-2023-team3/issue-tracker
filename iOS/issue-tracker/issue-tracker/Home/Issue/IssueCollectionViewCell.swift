@@ -15,7 +15,7 @@ class IssueCollectionViewCell: UICollectionViewCell {
     @IBOutlet var milestone: UILabel!
     @IBOutlet var labelsStackView: UIStackView!
     
-    let badges = ["안녕","내 이름은","이브라히모비치다"]
+    let badges = ["sfgs","gggassfsdfg","adfqewersdfsqasd"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +31,6 @@ class IssueCollectionViewCell: UICollectionViewCell {
         labelsStackView.axis = .horizontal
         labelsStackView.spacing = 10
         labelsStackView.distribution = .fill
-        
     }
     
     private func setBadge() {

@@ -47,7 +47,7 @@ class BadgeLabel: UILabel {
         
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalToConstant: textWidth + superview.frame.height),
-            self.heightAnchor.constraint(equalTo: superview.heightAnchor,multiplier: 0.8),
+            self.heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.8),
             self.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
         ])
     }
@@ -56,11 +56,11 @@ class BadgeLabel: UILabel {
         self.text = name
         self.textAlignment = .center
         switch name {
-        case "안녕":
+        case "sfgs":
             self.backgroundColor = UIColor(red: 0.992, green: 0.587, blue: 0.112, alpha: 1.0)
-        case "내 이름은":
+        case "gggassfsdfg":
             self.backgroundColor = UIColor(red: 1.0, green: 0.741, blue: 0.075, alpha: 1.0)
-        case "이브라히모비치다":
+        case "adfqewersdfsqasd":
             self.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1, alpha: 1.0)
         default:
             break
