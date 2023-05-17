@@ -90,21 +90,25 @@ extension IssueCollectionView: UICollectionViewDelegateFlowLayout {
 
 extension IssueCollectionView: SwipeCollectionViewCellDelegate {
     func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        guard let superview = superview else {
+            return nil
+        }
+        
         guard orientation == .right else {
             return nil
         }
         
-        let delete = SwipeAction(style: .destructive, title: "삭제") { action, indexPath in
-            
-        }
+        let delete = SwipeAction(style: .destructive, title: "삭제") { action, indexPath in }
+        
         delete.image = UIImage(systemName: "trash")
-        let exit = SwipeAction(style: .default, title: "닫기") { action, indexPath in
-
-        }
+        
+        let exit = SwipeAction(style: .default, title: "닫기") { action, indexPath in }
+        
         exit.image = UIImage(systemName: "archivebox")
         exit.backgroundColor = UIColor(red: 0.329, green: 0.227, blue: 0.745, alpha: 1)
-        
-        return [delete,exit]
+
+        return [delete, exit]
     }
     
     func collectionView(_ collectionView: UICollectionView, editActionsOptionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
@@ -114,3 +118,4 @@ extension IssueCollectionView: SwipeCollectionViewCellDelegate {
         return options
     }
 }
+
