@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwipeCellKit
 
 class IssueCollectionView: UICollectionView {
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
@@ -14,7 +15,7 @@ class IssueCollectionView: UICollectionView {
         self.dataSource = self
         registerCell()
     }
-    required init?(coder: NSCoder) { // 후..
+    required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.delegate = self
         self.dataSource = self
@@ -39,7 +40,10 @@ extension IssueCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCollectionViewCell.identifier, for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCollectionViewCell.identifier, for: indexPath) as? SwipeCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        cell.delegate = self
         return cell
     }
     
@@ -81,5 +85,32 @@ extension IssueCollectionView: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1.0
+    }
+}
+
+extension IssueCollectionView: SwipeCollectionViewCellDelegate {
+    func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        guard orientation == .right else {
+            return nil
+        }
+        
+        let delete = SwipeAction(style: .destructive, title: "삭제") { action, indexPath in
+            
+        }
+        delete.image = UIImage(systemName: "trash")
+        let exit = SwipeAction(style: .default, title: "닫기") { action, indexPath in
+
+        }
+        exit.image = UIImage(systemName: "archivebox")
+        exit.backgroundColor = UIColor(red: 0.329, green: 0.227, blue: 0.745, alpha: 1)
+        
+        return [delete,exit]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, editActionsOptionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        options.transitionStyle = .border
+        return options
     }
 }

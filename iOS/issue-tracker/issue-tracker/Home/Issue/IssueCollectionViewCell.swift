@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class IssueCollectionViewCell: UICollectionViewCell {
+class IssueCollectionViewCell: SwipeCollectionViewCell {
     static let identifier = "IssueCollectionViewCell"
     @IBOutlet var title: UILabel!
     @IBOutlet var contents: UILabel!
@@ -45,5 +46,11 @@ class IssueCollectionViewCell: UICollectionViewCell {
         let subIconView = SubIconView(image: UIImage(systemName: "chevron.right"))
         
         self.addSubview(subIconView)
+    }
+}
+
+extension IssueCollectionViewCell: SwipeCollectionViewCellDelegate {
+    func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeCellKit.SwipeActionsOrientation) -> [SwipeCellKit.SwipeAction]? {
+        return nil
     }
 }
