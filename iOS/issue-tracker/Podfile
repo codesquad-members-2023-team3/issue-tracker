@@ -7,5 +7,6 @@ target 'issue-tracker' do
 
   # Pods for issue-tracker
   pod 'SwiftLint' 
+  pod 'SwipeCellKit'
 
 end
