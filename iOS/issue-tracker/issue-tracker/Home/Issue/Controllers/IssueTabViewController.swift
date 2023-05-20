@@ -6,24 +6,27 @@
 //
 
 import UIKit
+import OSLog
 
 class IssueTabViewController: UIViewController {
+    let logger = Logger()
     let fetcher = HTTPDataFetcher()
+    let networkManager = NetworkManager()
+    var issueFrames: [IssueFrame]?
     
     let collectionView = IssueCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     @IBOutlet var backPlane: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         backPlane.addSubview(collectionView)
-        
-        fetcher.fetchIssueData(completion: { result in
+        networkManager.fetchIssueData { result in
             switch result {
-            case .success(let jsonString):
-                print(jsonString)
+            case .success(let issueFrameHolder):
+                self.issueFrames = issueFrameHolder.issues
             case .failure(let error):
-                print(error.localizedDescription)
+                self.logger.error("error : \(error)")
             }
-        })
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
