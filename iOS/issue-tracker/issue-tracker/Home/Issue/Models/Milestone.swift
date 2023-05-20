@@ -7,6 +7,9 @@
 
 import Foundation
 
-struct Milestone {
+struct Milestone: Codable {
     let name: String
+    let scheduledCompletionDate: String
+    let descriptionForLabel: String
+    let empty: Bool
 }

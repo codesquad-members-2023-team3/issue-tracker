@@ -8,10 +8,23 @@
 import Foundation
 
 struct IssueFrame: Codable {
+    let number: Int
     let title: String
     let contents: String
-    let milestone: String
-    let labels: [Label]
     let state: Bool
-    let author: String
+    let createdDate: String
+    let lastUpdatedDate: String
+//    let author: String
+    let milestone: Milestone
+    let user: User
+    let labels: [Label]
+    let assignees: [User]
 }
+
+struct User: Codable {
+    let id: String
+    let password: String
+    let nickname: String
+    let imgUrl: String
+}
+
