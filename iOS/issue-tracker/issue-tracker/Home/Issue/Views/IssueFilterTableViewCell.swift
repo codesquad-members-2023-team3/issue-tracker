@@ -11,7 +11,11 @@ class IssueFilterTableViewCell: UITableViewCell {
 
     @IBOutlet var filterOptionLabel: UILabel!
     @IBOutlet var togglableImageView: UIImageView!
-    var isOptionSelected = false
+    var isOptionSelected = false {
+        willSet {
+            togglableImageView.image = newValue ? selectedImage : deselectedImage
+        }
+    }
     var selectedImage: UIImage?
     var deselectedImage: UIImage?
     
@@ -26,8 +30,7 @@ class IssueFilterTableViewCell: UITableViewCell {
         togglableImageView.image = deselectedImage
     }
     
-    func toggleImage() {
+    func toggleSelecting() {
         isOptionSelected.toggle()
-        togglableImageView.image = isOptionSelected ? selectedImage : deselectedImage
     }
 }
