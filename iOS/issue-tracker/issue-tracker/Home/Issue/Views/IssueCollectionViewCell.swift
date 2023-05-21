@@ -16,7 +16,7 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
     @IBOutlet var milestone: UILabel!
     @IBOutlet var labelsStackView: UIStackView!
     
-    let badges = ["sfgs","gggassfsdfg","adfqewersdfsqasd"]
+    var badges = ["sfgs","gggassfsdfg","adfqewersdfsqasd"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -39,6 +39,13 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
             labelsStackView.addArrangedSubview(BadgeLabel(name: item))
         }
         labelsStackView.addArrangedSubview(UIView(frame: CGRect()))
+    }
+    
+    func configure(with issueFrame: IssueFrame) {
+        title.text = issueFrame.title
+        contents.text = issueFrame.contents
+        milestone.text = issueFrame.milestone.name
+        badges = issueFrame.labels.map { $0.name }
     }
 }
 
