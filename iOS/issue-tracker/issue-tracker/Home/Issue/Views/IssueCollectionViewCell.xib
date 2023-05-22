@@ -43,11 +43,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="equalSpacing" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-Tu-p6V">
+                    <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" distribution="equalSpacing" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-Tu-p6V">
                         <rect key="frame" x="0.0" y="87" width="393" height="39"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="BeV-Tu-p6V" secondAttribute="height" multiplier="353:35" id="SpP-Ym-LYF"/>
-                        </constraints>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="chevron.forward" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="n3w-IR-4Ta" customClass="SubIconView" customModule="issue_tracker" customModuleProvider="target">
                         <rect key="frame" x="367" y="13" width="13" height="21"/>

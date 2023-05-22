@@ -38,7 +38,6 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
             title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: round(-(self.frame.width * 30 / 322))),
             title.heightAnchor.constraint(equalToConstant: round(self.frame.height * 34 / 131))
         ])
-        
     }
     
     private func setContents() {
@@ -82,9 +81,10 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            labelsStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: round(self.frame.height/3)),
+            labelsStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: round(self.frame.height/2.6 )),
             labelsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: round(self.frame.width * 20 / 322)),
-            labelsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+            labelsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            labelsStackView.heightAnchor.constraint(equalToConstant: round(self.frame.height * 30 / 131))
         ])
     }
     

@@ -34,7 +34,7 @@ class BadgeLabel: UILabel {
         self.clipsToBounds = true
         self.layer.cornerRadius = 15
         
-        self.font = UIFont.systemFont(ofSize: superview.frame.height / 2.6, weight: .regular)
+        self.font = UIFont.systemFont(ofSize: round(superview.frame.height / 2.6), weight: .regular)
         
         let font = self.font
         let text = self.text ?? ""
@@ -47,7 +47,8 @@ class BadgeLabel: UILabel {
         
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalToConstant: textWidth + superview.frame.height),
-            self.heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.8),
+//            self.heightAnchor.constraint(equalTo: superview.heightAnchor, multiplier: 0.8),
+            self.bottomAnchor.constraint(equalTo: superview.bottomAnchor),
             self.centerYAnchor.constraint(equalTo: superview.centerYAnchor)
         ])
     }
