@@ -10,7 +10,7 @@ import UIKit
 class IssueFilterTableViewController: UITableViewController {
     private let checkmarkImage = UIImage(systemName: "checkmark")
     private let grayCheckmarkImage = UIImage(systemName: "checkmark")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
-    weak var delegate: UIViewController?
+    weak var delegate: IssueTabViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +27,9 @@ class IssueFilterTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0: return 2
-        case 1: return 3
-        case 2: return 4
+        case 0: return 4
+        case 1: return 4
+        case 2: return 2
         default: return 1
         }
     }
@@ -84,6 +84,8 @@ class IssueFilterTableViewController: UITableViewController {
     
     @objc func saveAction() {
         // TODO: Convey filter options to previous VC
+        
+        delegate?.fetchData(with: "")
         dismissSelf()
     }
     
