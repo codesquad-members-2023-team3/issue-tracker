@@ -23,15 +23,69 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         setTitle()
         setStackView()
         setBadge()
+        setContents()
+        setMilestoneImage()
+        setMilestone()
     }
     private func setTitle() {
         title.text = "iOS 이슈트래커 개발"
+        
+        title.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            title.topAnchor.constraint(equalTo: self.topAnchor),
+            title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -(self.frame.width * 30 / 322)),
+            title.heightAnchor.constraint(equalToConstant: self.frame.height * 34 / 131)
+        ])
+        
+    }
+    
+    private func setContents() {
+        contents.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            contents.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
+            contents.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            contents.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            contents.topAnchor.constraint(equalTo: title.bottomAnchor )
+        ])
+    }
+    
+    private func setMilestoneImage() {
+        milestoneImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            milestoneImage.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
+            milestoneImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            milestoneImage.topAnchor.constraint(equalTo: contents.bottomAnchor),
+            milestoneImage.widthAnchor.constraint(equalTo: milestoneImage.heightAnchor)
+        ])
+    }
+    
+    private func setMilestone() {
+        milestone.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            milestone.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
+            milestone.leadingAnchor.constraint(equalTo: milestoneImage.trailingAnchor, constant: self.frame.width * 4 / 375),
+            milestone.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            milestone.topAnchor.constraint(equalTo: contents.bottomAnchor )
+        ])
     }
     
     private func setStackView() {
         labelsStackView.axis = .horizontal
         labelsStackView.spacing = 10
         labelsStackView.distribution = .fill
+        
+        labelsStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            labelsStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: self.frame.height/3),
+            labelsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            labelsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+        ])
     }
     
     private func setBadge() {
