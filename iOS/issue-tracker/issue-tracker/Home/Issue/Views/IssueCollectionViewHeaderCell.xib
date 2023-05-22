@@ -14,32 +14,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="113"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
-                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-g7-soW">
-                    <rect key="frame" x="0.0" y="57" width="393" height="56"/>
-                    <textInputTraits key="textInputTraits"/>
-                </searchBar>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이슈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-12-QF4">
-                    <rect key="frame" x="16" y="0.0" width="377" height="57"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="57" id="Dpf-u5-cql"/>
-                        <constraint firstAttribute="width" constant="377" id="rwh-Af-ICh"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이슈" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5p-12-QF4">
+                    <rect key="frame" x="16" y="0.0" width="377" height="33.333333333333336"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name=".AppleSDGothicNeoI-Regular" family=".Apple SD Gothic NeoI" pointSize="30"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GM0-g7-soW">
+                    <rect key="frame" x="0.0" y="57" width="393" height="56"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
-            <constraints>
-                <constraint firstItem="GM0-g7-soW" firstAttribute="top" secondItem="q5p-12-QF4" secondAttribute="bottom" id="6w8-Ji-XbE"/>
-                <constraint firstItem="GM0-g7-soW" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="width" id="AkB-uZ-Ga7"/>
-                <constraint firstItem="q5p-12-QF4" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="Jnw-ar-FjN"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="q5p-12-QF4" secondAttribute="trailing" id="M0q-Dx-jKS"/>
-                <constraint firstItem="GM0-g7-soW" firstAttribute="centerX" secondItem="VXr-Tz-HHm" secondAttribute="centerX" id="UVC-Lc-1tI"/>
-                <constraint firstItem="GM0-g7-soW" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="393:113" id="fCo-pN-Him"/>
-                <constraint firstItem="q5p-12-QF4" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="ka8-7N-vL6"/>
-                <constraint firstAttribute="bottom" secondItem="GM0-g7-soW" secondAttribute="bottom" id="zzo-Os-SiE"/>
-            </constraints>
             <connections>
                 <outlet property="searchBar" destination="GM0-g7-soW" id="oz2-S4-or3"/>
                 <outlet property="title" destination="q5p-12-QF4" id="3NF-8L-LT9"/>
