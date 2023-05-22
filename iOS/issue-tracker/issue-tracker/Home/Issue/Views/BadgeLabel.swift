@@ -64,7 +64,7 @@ class BadgeLabel: UILabel {
         case "adfqewersdfsqasd":
             self.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1, alpha: 1.0)
         default:
-            break
+            self.backgroundColor = UIColor(red: 0.0, green: 0.478, blue: 1, alpha: 1.0)
         }
         self.textColor = .white
     }

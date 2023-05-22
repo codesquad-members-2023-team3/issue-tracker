@@ -23,6 +23,11 @@ class IssueTabViewController: UIViewController {
             switch result {
             case .success(let issueFrameHolder):
                 self.issueFrames = issueFrameHolder.issues
+                guard let issueFrames = self.issueFrames else { return }
+                self.collectionView.issueFrames = issueFrames
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
             case .failure(let error):
                 self.logger.error("error : \(error)")
             }

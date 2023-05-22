@@ -9,6 +9,12 @@ import UIKit
 import SwipeCellKit
 
 class IssueCollectionView: UICollectionView {
+    var issueFrames: [IssueFrame] = [
+        IssueFrame(number: 1, title: "Test-1", contents: "Test1Contents", state: true, createdDate: "123", lastUpdatedDate: "123", milestone: Milestone(name: "MilestoneName", scheduledCompletionDate: "123", descriptionForLabel: "milestoneDescription", empty: false), user: User(id: "testId", password: "123", nickname: "Eddie", imgUrl: "www."), labels: [Label(name: "TestLabel", textColor: "color", backgroundColor: "color")], assignees: []),
+        IssueFrame(number: 2, title: "Test-2", contents: "Test2Contents", state: false, createdDate: "213", lastUpdatedDate: "123", milestone: Milestone(name: "MilestoneName", scheduledCompletionDate: "123", descriptionForLabel: "milestoneDescription", empty: false), user: User(id: "testId2", password: "123", nickname: "Eddie2", imgUrl: "www."), labels: [Label(name: "TestLabel1", textColor: "color", backgroundColor: "color")], assignees: [])
+    
+    ]
+    
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
         self.delegate = self
@@ -32,7 +38,8 @@ extension IssueCollectionView: UICollectionViewDelegate {
 
 extension IssueCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return self.issueFrames.count
+        
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -40,9 +47,10 @@ extension IssueCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCollectionViewCell.identifier, for: indexPath) as? SwipeCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: IssueCollectionViewCell.identifier, for: indexPath) as? IssueCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.configure(with: self.issueFrames[indexPath.item])
         cell.delegate = self
         return cell
     }
@@ -99,7 +107,9 @@ extension IssueCollectionView: SwipeCollectionViewCellDelegate {
             return nil
         }
         
-        let delete = SwipeAction(style: .destructive, title: "삭제") { action, indexPath in }
+        let delete = SwipeAction(style: .destructive, title: "삭제") { action, indexPath in
+            self.issueFrames.remove(at: indexPath.item)
+        }
         
         delete.image = UIImage(systemName: "trash")
         

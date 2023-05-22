@@ -22,7 +22,7 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         super.awakeFromNib()
         setTitle()
         setStackView()
-        setBadge()
+//        setBadge() : configure 메소드로 이동
         setContents()
         setMilestoneImage()
         setMilestone()
@@ -100,6 +100,7 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         contents.text = issueFrame.contents
         milestone.text = issueFrame.milestone.name
         badges = issueFrame.labels.map { $0.name }
+        setBadge()
     }
 }
 
