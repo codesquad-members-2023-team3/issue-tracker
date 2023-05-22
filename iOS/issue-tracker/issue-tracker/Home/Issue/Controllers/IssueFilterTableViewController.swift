@@ -10,6 +10,7 @@ import UIKit
 class IssueFilterTableViewController: UITableViewController {
     private let checkmarkImage = UIImage(systemName: "checkmark")
     private let grayCheckmarkImage = UIImage(systemName: "checkmark")?.withTintColor(.gray, renderingMode: .alwaysOriginal)
+    weak var delegate: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
