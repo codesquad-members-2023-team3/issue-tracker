@@ -34,9 +34,9 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: self.topAnchor),
-            title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
-            title.trailingAnchor.constraint(equalTo: self.trailingAnchor,constant: -(self.frame.width * 30 / 322)),
-            title.heightAnchor.constraint(equalToConstant: self.frame.height * 34 / 131)
+            title.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: round(self.frame.width * 20 / 322)),
+            title.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: round(-(self.frame.width * 30 / 322))),
+            title.heightAnchor.constraint(equalToConstant: round(self.frame.height * 34 / 131))
         ])
         
     }
@@ -45,8 +45,8 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         contents.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            contents.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
-            contents.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            contents.heightAnchor.constraint(equalToConstant: round(self.frame.height * 30 / 131)),
+            contents.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: round(self.frame.width * 20 / 322)),
             contents.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             contents.topAnchor.constraint(equalTo: title.bottomAnchor )
         ])
@@ -56,8 +56,8 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         milestoneImage.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            milestoneImage.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
-            milestoneImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            milestoneImage.heightAnchor.constraint(equalToConstant: round(self.frame.height * 30 / 131.0)),
+            milestoneImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: round(self.frame.width * 20.0 / 322.0)),
             milestoneImage.topAnchor.constraint(equalTo: contents.bottomAnchor),
             milestoneImage.widthAnchor.constraint(equalTo: milestoneImage.heightAnchor)
         ])
@@ -67,8 +67,8 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         milestone.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            milestone.heightAnchor.constraint(equalToConstant: self.frame.height * 30 / 131),
-            milestone.leadingAnchor.constraint(equalTo: milestoneImage.trailingAnchor, constant: self.frame.width * 4 / 375),
+            milestone.heightAnchor.constraint(equalToConstant: round(self.frame.height * 30 / 131)),
+            milestone.leadingAnchor.constraint(equalTo: milestoneImage.trailingAnchor, constant: round(self.frame.width * 4 / 375)),
             milestone.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             milestone.topAnchor.constraint(equalTo: contents.bottomAnchor )
         ])
@@ -82,8 +82,8 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         labelsStackView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            labelsStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: self.frame.height/3),
-            labelsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: self.frame.width * 20 / 322),
+            labelsStackView.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: round(self.frame.height/3)),
+            labelsStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: round(self.frame.width * 20 / 322)),
             labelsStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
     }

@@ -38,12 +38,10 @@
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="signpost.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-pn-4B5">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="signpost.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-pn-4B5">
                         <rect key="frame" x="285" y="68.333333333333314" width="28" height="19.666666666666671"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="28" id="Bi7-Qv-LqL"/>
-                        </constraints>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="equalSpacing" spacing="10" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-Tu-p6V">
                         <rect key="frame" x="0.0" y="87" width="393" height="39"/>
