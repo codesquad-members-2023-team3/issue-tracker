@@ -14,6 +14,7 @@
 		8F61EB282A1648B90020E302 /* IssueFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F61EB272A1648B90020E302 /* IssueFrame.swift */; };
 		8FB11D842A18D8BC00EDEE45 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB11D832A18D8BC00EDEE45 /* NetworkManager.swift */; };
 		8FB11D862A18E72E00EDEE45 /* IssueFrameHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB11D852A18E72E00EDEE45 /* IssueFrameHolder.swift */; };
+		8FB11D8B2A1C530E00EDEE45 /* FilterOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB11D8A2A1C530E00EDEE45 /* FilterOption.swift */; };
 		8FBE800B2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBE80092A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift */; };
 		8FBE800C2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FBE800A2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib */; };
 		E4802D9D2A11FD470077B0F4 /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4802D9C2A11FD470077B0F4 /* BadgeLabel.swift */; };
@@ -50,6 +51,7 @@
 		8F61EB272A1648B90020E302 /* IssueFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFrame.swift; sourceTree = "<group>"; };
 		8FB11D832A18D8BC00EDEE45 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		8FB11D852A18E72E00EDEE45 /* IssueFrameHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFrameHolder.swift; sourceTree = "<group>"; };
+		8FB11D8A2A1C530E00EDEE45 /* FilterOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOption.swift; sourceTree = "<group>"; };
 		8FBE80092A0B8D8B00D9DA1A /* IssueFilterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueFilterTableViewCell.swift; sourceTree = "<group>"; };
 		8FBE800A2A0B8D8B00D9DA1A /* IssueFilterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueFilterTableViewCell.xib; sourceTree = "<group>"; };
 		C4A228AF8694FA3F29925403 /* Pods_issue_tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_issue_tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +219,7 @@
 				8F61EB252A1642ED0020E302 /* State.swift */,
 				8F61EB272A1648B90020E302 /* IssueFrame.swift */,
 				8FB11D852A18E72E00EDEE45 /* IssueFrameHolder.swift */,
+				8FB11D8A2A1C530E00EDEE45 /* FilterOption.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				8FB11D862A18E72E00EDEE45 /* IssueFrameHolder.swift in Sources */,
 				E482789C2A0BAC7700E91FA3 /* IssueCollectionViewCell.swift in Sources */,
 				E48278812A09ED1E00E91FA3 /* IssueTabViewController.swift in Sources */,
+				8FB11D8B2A1C530E00EDEE45 /* FilterOption.swift in Sources */,
 				E48278632A09DAC800E91FA3 /* AppDelegate.swift in Sources */,
 				E4D8AD6A2A162600005BA9BA /* HTTPDataFetcher.swift in Sources */,
 				E4802D9F2A131A8D0077B0F4 /* SubIconView.swift in Sources */,
