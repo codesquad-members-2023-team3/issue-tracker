@@ -42,8 +42,13 @@ class IssueTabViewController: UIViewController {
         }
     }
     
-    func fetchData(with urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    func fetchData() {
+        guard let url = URL(string: currentIssueDataUrlString) else {
+            self.logger.log(
+                "Invalie URL string : \(self.currentIssueDataUrlString)")
+            return
+        }
+        
         networkManager.fetchIssueData(with: url) { result in
             switch result {
             case .success(let issueFrameHolder):
