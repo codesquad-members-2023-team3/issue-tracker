@@ -85,7 +85,7 @@ class IssueFilterTableViewController: UITableViewController {
     @objc func saveAction() {
         // TODO: Convey filter options to previous VC
         
-        delegate?.fetchData(with: "")
+        delegate?.fetchData()
         dismissSelf()
     }
     
@@ -93,4 +93,3 @@ class IssueFilterTableViewController: UITableViewController {
         self.dismiss(animated: true, completion: nil)
     }
 }
-
