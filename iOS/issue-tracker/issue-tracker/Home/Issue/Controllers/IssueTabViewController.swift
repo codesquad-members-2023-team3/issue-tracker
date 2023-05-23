@@ -63,4 +63,8 @@ class IssueTabViewController: UIViewController {
             }
         }
     }
+    
+    func setUrlString(with urlString: String) {
+        currentIssueDataUrlString = urlString
+    }
 }
