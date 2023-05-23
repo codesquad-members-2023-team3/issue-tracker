@@ -9,10 +9,10 @@ import UIKit
 import OSLog
 
 class IssueTabViewController: UIViewController {
-    let logger = Logger()
-    let fetcher = HTTPDataFetcher()
-    let networkManager = NetworkManager()
-    var issueFrames: [IssueFrame]?
+    private let logger = Logger()
+    private let networkManager = NetworkManager()
+    private var issueFrames: [IssueFrame]?
+    private var currentIssueDataUrlString: String = "http://3.38.73.117:8080/api-ios/issues"
     
     let collectionView = IssueCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     @IBOutlet var backPlane: UIView!
