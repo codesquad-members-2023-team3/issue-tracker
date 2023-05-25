@@ -31,9 +31,7 @@ public interface IssueRepository extends CrudRepository<Issue, Integer>, IssueRe
 
     @Query(value = "select " +
             "(select count(number) from ISSUE where state=true) as openedIssuesCount, " +
-            "(select count(number) from ISSUE where state=false) as closedIssuesCount, " +
-            "(select count(name) from LABEL) as labelsCount, " +
-            "(select count(name) from MILESTONE) as milestoneCount",
+            "(select count(number) from ISSUE where state=false) as closedIssuesCount",
             rowMapperClass = CountRowMapper.class)
     CountDTO countEntities();
 }
