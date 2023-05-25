@@ -2,9 +2,7 @@ package com.example.be.issue;
 
 import com.example.be.assignee.Assignee;
 import com.example.be.issue.dto.*;
-import com.example.be.label.Label;
 import com.example.be.label.LabelRepository;
-import com.example.be.milestone.Milestone;
 import com.example.be.milestone.MilestoneRepository;
 import com.example.be.user.User;
 import com.example.be.user.UserRepository;
@@ -14,7 +12,6 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 @Service
 public class IssueService {
@@ -34,13 +31,8 @@ public class IssueService {
 
     public FeIssueResponseDTO makeFeIssueResponse(IssueSearchCondition issueSearchCondition) {
         Collection<Issue> issues = findIssues(issueSearchCondition);
-        CountDTO countDTO = issueRepository.countEntities();
-        List<Label> allLabels = StreamSupport.stream(labelRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
-        List<Milestone> allMilestones = StreamSupport.stream(milestoneRepository.findAll().spliterator(), false)
-                .collect(Collectors.toList());
-
-        return new FeIssueResponseDTO(issues, countDTO, allLabels, allMilestones);
+        CountDTO countDTO = calculateCount();
+        return new FeIssueResponseDTO(issues, countDTO);
     }
 
     public IosIssueResponseDTO makeIosIssueResponse(IssueSearchCondition issueSearchCondition) {
@@ -84,5 +76,9 @@ public class IssueService {
         assignees.forEach(assignee -> issueMap.get(assignee.getIssueNumber()).add(assignee));
 
         return issueMap.values();
+    }
+
+    private CountDTO calculateCount() {
+        return issueRepository.countEntities();
     }
 }
