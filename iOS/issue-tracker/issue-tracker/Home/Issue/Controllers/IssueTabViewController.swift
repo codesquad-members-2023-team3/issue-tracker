@@ -35,6 +35,10 @@ class IssueTabViewController: UIViewController {
         setAddIssueButton()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchData()
+    }
+    
     private func setAddIssueButton() {
         addIssueButton = AddIssueButton(radius: self.view.frame.height * 56 / 666)
         guard let addIssueButton = addIssueButton else {
@@ -71,10 +75,6 @@ class IssueTabViewController: UIViewController {
             return
         }
         self.view.addSubview(toolBar)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        fetchData()
     }
     
     private func setCancelButton() {
