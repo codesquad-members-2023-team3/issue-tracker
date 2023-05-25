@@ -27,6 +27,12 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
         setMilestoneImage()
         setMilestone()
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        labelsStackView.arrangedSubviews.forEach { view in view.removeFromSuperview() }
+    }
+    
     private func setTitle() {
         title.text = "iOS 이슈트래커 개발"
         
