@@ -15,7 +15,7 @@ struct IssueFrame: Codable {
     let createdDate: String
     let lastUpdatedDate: String
 //    let author: String
-    let milestone: Milestone
+    let milestone: Milestone?
     let user: User
     let labels: [Label]
     let assignees: [User]

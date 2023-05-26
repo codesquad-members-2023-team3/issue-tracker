@@ -138,7 +138,7 @@ class IssueCollectionViewCell: SwipeCollectionViewCell {
     func configure(with issueFrame: IssueFrame) {
         title.text = issueFrame.title
         contents.text = issueFrame.contents
-        milestone.text = issueFrame.milestone.name
+        milestone.text = issueFrame.milestone?.name
         badges = issueFrame.labels.map { $0.name }
         setBadge()
     }
