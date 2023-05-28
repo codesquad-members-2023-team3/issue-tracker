@@ -70,12 +70,11 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
     private func setIssueAddButtonConstraints(button: UIButton) {
         
         let length = self.view.frame.height * 56 / 666
-        
         button.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             button.heightAnchor.constraint(equalToConstant: length),
             button.widthAnchor.constraint(equalToConstant: length),
-            button.bottomAnchor.constraint(equalTo: self.collectionView.bottomAnchor, constant: -length/2),
+            button.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -length*1.5),
             button.trailingAnchor.constraint(equalTo: self.collectionView.trailingAnchor, constant: -length/2)
         ])
     }
@@ -84,7 +83,7 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
         guard let tabBar = self.tabBarController?.tabBar else {
             return CGRect()
         }
-        let frame = CGRect(origin: tabBar.frame.origin, size: CGSize(width: tabBar.frame.width, height: tabBar.frame.height/2))
+        let frame = CGRect(origin: tabBar.frame.origin, size: CGSize(width: tabBar.frame.width, height: tabBar.frame.height/1.6))
         return frame
     }
     
