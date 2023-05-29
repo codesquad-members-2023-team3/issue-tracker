@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuU-km-pVo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="1158"/>
+            <point key="canvasLocation" x="2106" y="1461"/>
         </scene>
         <!--마일스톤-->
         <scene sceneID="Zsl-dJ-NYp">
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfy-vA-IPr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="517"/>
+            <point key="canvasLocation" x="2106" y="675"/>
         </scene>
         <!--레이블-->
         <scene sceneID="DtT-8V-1PN">
@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIp-9r-1pb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849.6183206106869" y="-126.05633802816902"/>
+            <point key="canvasLocation" x="1850" y="-65"/>
         </scene>
         <!--Issue Tab View Controller-->
         <scene sceneID="uG2-ZW-Zvr">

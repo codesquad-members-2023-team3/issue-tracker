@@ -19,7 +19,7 @@ class SubIconView: UIImageView {
             self.image = UIImage(systemName: "checkmark.circle.fill")
             self.image = image?.withTintColor(.tintColor, renderingMode: .alwaysOriginal)
         }
-        else if isCheckmarked == false {
+        else {
             self.image = UIImage(systemName: "chevron.forward")
             self.image = image?.withTintColor(.gray, renderingMode: .alwaysOriginal)
         }
