@@ -36,7 +36,7 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
         setAddIssueButton()
     }
     
-
+    
     func didSelectCell(in collectionView: IssueCollectionView, at indexPath: IndexPath) {
         if isSelectionMode == true {
             guard let cell = collectionView.cellForItem(at: indexPath) as? IssueCollectionViewCell else {
@@ -57,15 +57,15 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
     func resetCellSelection() {
         for indexPath in collectionView.indexPathsForVisibleItems {
             guard let cell = collectionView.cellForItem(at: indexPath) as? IssueCollectionViewCell else {
-                    continue
-                }
-                cell.isCheckmarked = false
-                cell.subIconView.change(isCheckmarked: false)
-                cell.updateSubIconViewConstraints()
+                continue
             }
+            cell.isCheckmarked = false
+            cell.subIconView.change(isCheckmarked: false)
+            cell.updateSubIconViewConstraints()
+        }
         self.toolBar?.resetTitle()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
     }
