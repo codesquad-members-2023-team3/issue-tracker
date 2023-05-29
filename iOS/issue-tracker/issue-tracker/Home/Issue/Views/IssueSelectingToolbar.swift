@@ -71,6 +71,12 @@ class IssueSelectingToolbar: UIToolbar {
         self.setItems([leftItem, flexibleSpace, titleItem, flexibleSpace, rightItem], animated: true)
     }
     
+    func resetTitle(){
+        self.titleItem.title = "이슈를 선택하세요."
+        titleItem.isEnabled = false
+        self.selectedCellCount = 0
+    }
+    
     private func setToolBarProPerties() {
         self.items = setToolBarItems()
         self.isHidden = true

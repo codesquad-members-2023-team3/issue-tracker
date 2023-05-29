@@ -53,6 +53,18 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
             cell.updateSubIconViewConstraints()
         }
     }
+    
+    func resetCellSelection() {
+        for indexPath in collectionView.indexPathsForVisibleItems {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? IssueCollectionViewCell else {
+                    continue
+                }
+                cell.isCheckmarked = false
+                cell.subIconView.change(isCheckmarked: false)
+                cell.updateSubIconViewConstraints()
+            }
+        self.toolBar?.resetTitle()
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         fetchData()
@@ -122,6 +134,7 @@ class IssueTabViewController: UIViewController, IssueCollectionViewDelegate {
         self.navigationItem.rightBarButtonItem = selectButton
         self.addIssueButton?.isHidden = false
         self.isSelectionMode.toggle()
+        self.resetCellSelection()
     }
     
     private func fetchData() {
